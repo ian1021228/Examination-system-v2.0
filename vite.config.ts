@@ -1,8 +1,10 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
 
+// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  // 新增下面這一行，設定 GitHub Pages 的 Repository 名稱
-  base: '/Examination-system-v2.0/', 
+  plugins: [react(), tailwindcss()],
+  base: './', // 加上這個讓 GitHub Pages 能夠正確載入 CSS/JS 資源
 })
+

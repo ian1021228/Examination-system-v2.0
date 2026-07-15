@@ -1862,7 +1862,7 @@ export default function App() {
   }
 
   return (
-    <Router>
+    <Router basename="/Examination-system-v2.0/">
       <Layout user={user}>
         <Routes>
           <Route path="/" element={!user ? <SignIn /> : <Navigate to={user.role === 'admin' ? "/admin" : "/select-subject"} />} />
